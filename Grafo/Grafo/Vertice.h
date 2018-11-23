@@ -7,9 +7,13 @@ class Vertice
 {
 private:
 	string nome;
+	int codigo;
 public:
+	char operator==(const Vertice&)const throw();
+	Vertice(string, int);
 	Vertice(string);
 	string getNome();
+	int getCodigo();
 	~Vertice();
 };
 #endif

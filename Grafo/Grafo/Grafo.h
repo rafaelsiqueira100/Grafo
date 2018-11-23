@@ -3,16 +3,18 @@
 #define GRAFO_H_INCLUDED
 #include "Vertice.h"
 #include "MatrizEsparsa.h"
+#include <list>
 class Grafo
 {
 private:
 	int numVertices;
-	Vertice* vertices;
+	list<Vertice> listaVertices;
 	MatrizEsparsa matAdjacencia;
+	const InfoArvoreEsparsa& valorPadrao;
 public:
-	Grafo(int);
+	Grafo(const InfoArvoreEsparsa&);
 	void novoVertice(string);
-	void novaAresta(string, string, InfoArvoreEsparsa*);
+	void novaAresta(string, string,const InfoArvoreEsparsa&)throw(char*);
 	void removerVertice(string);
 	void removerAresta(string, string);
 
