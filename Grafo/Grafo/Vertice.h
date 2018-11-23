@@ -8,7 +8,7 @@ class Vertice
 private:
 	string nome;
 public:
-	Vertice();
+	Vertice(string);
 	string getNome();
 	~Vertice();
 };

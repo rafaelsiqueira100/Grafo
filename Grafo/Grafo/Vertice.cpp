@@ -2,13 +2,15 @@
 #include "Vertice.h"
 
 
-Vertice::Vertice()
+
+Vertice::Vertice(string n)
 {
+	this->nome = n;
 }
 
 string Vertice::getNome()
 {
-	return string();
+	return this->nome;
 }
 
 

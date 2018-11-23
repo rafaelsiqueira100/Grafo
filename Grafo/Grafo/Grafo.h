@@ -7,7 +7,6 @@ class Grafo
 {
 private:
 	int numVertices;
-	int infinity = 100000000;
 	Vertice* vertices;
 	MatrizEsparsa matAdjacencia;
 public:
@@ -15,7 +14,7 @@ public:
 	void novoVertice(string);
 	void novaAresta(string, string, InfoArvoreEsparsa*);
 	void removerVertice(string);
-	void removerAresta(string, string)
+	void removerAresta(string, string);
 
 
 	~Grafo();

@@ -147,8 +147,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Aresta.h" />
     <ClInclude Include="ArvoreEsparsa.h" />
-    <ClInclude Include="Caminho.h" />
     <ClInclude Include="Grafo.h" />
     <ClInclude Include="InfoArvoreEsparsa.h" />
     <ClInclude Include="MatrizEsparsa.h" />
@@ -159,8 +159,8 @@
     <ClInclude Include="Vertice.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Aresta.cpp" />
     <ClCompile Include="ArvoreEsparsa.cpp" />
-    <ClCompile Include="Caminho.cpp" />
     <ClCompile Include="Grafo.cpp" />
     <ClCompile Include="InfoArvoreEsparsa.cpp" />
     <ClCompile Include="main.cpp" />

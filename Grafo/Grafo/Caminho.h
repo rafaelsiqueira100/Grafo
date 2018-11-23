@@ -12,7 +12,7 @@ private:
 	const int menorCusto = 1;
 public:
 	Caminho(Vertice, Vertice, InfoArvoreEsparsa* custo);
-
+	
 	~Caminho();
 };
 
