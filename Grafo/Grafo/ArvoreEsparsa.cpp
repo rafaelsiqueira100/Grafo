@@ -104,7 +104,7 @@ void ArvoreEsparsa::inserir(InfoArvoreEsparsa* info)
 	if (this->raiz == nullptr)
 		raiz = new NoArvoreEsparsa();
 	if ((this->raiz->isVazio())) {
-		this->raiz == nullptr;
+		this->raiz = nullptr;
 		raiz = new NoArvoreEsparsa();
 	}
 	this->raiz->inserirVetorOrdem(info);

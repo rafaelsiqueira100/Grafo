@@ -138,6 +138,26 @@ void MatrizEsparsa::inserir(int linha, int coluna, InfoArvoreEsparsa*valor) thro
 			this->vazia = 0;
 	}
 
+int MatrizEsparsa::getMenorLinha() throw(char *)
+{
+	return this->calcularMenorLinha();
+}
+
+int MatrizEsparsa::getMaiorLinha() throw(char *)
+{
+	return this->calcularMaiorLinha();
+}
+
+int MatrizEsparsa::getMenorColuna() throw(char *)
+{
+	return this->
+}
+
+int MatrizEsparsa::getMaiorColuna() throw(char *)
+{
+	return 0;
+}
+
 void MatrizEsparsa::calcularMenorLinha() throw(char *)
 {
 	if (this->vazia)

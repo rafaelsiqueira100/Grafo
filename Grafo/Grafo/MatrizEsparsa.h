@@ -13,7 +13,10 @@ public:
 	InfoArvoreEsparsa* pegar(int, int);
 	void inserir(int, int, InfoArvoreEsparsa*) throw(char*);
 	friend ostream& operator<< (ostream&, const MatrizEsparsa&) throw();
-	
+	int getMenorLinha() throw(char*);
+	int getMaiorLinha() throw(char*);
+	int getMenorColuna() throw(char*);
+	int getMaiorColuna() throw(char*);
 private:
 	char vazia;
 	ArvoreEsparsa arvoreLinhas;

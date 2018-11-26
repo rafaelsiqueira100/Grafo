@@ -4,7 +4,7 @@
 
 
 
-Grafo::Grafo(const InfoArvoreEsparsa& vP) :matAdjacencia(&vP),
+Grafo::Grafo(const InfoArvoreEsparsa& vP) :matAdjacencia((InfoArvoreEsparsa*)&vP),
 numVertices(0),
 valorPadrao(vP)
 {
@@ -14,7 +14,7 @@ valorPadrao(vP)
 void Grafo::novoVertice(string nomeNovoVertice)
 {
 	Vertice novoV(nomeNovoVertice, numVertices);
-	listaVertices.push_back((novoV);
+	listaVertices.push_back(novoV);
 	numVertices++;
 }
 
@@ -55,7 +55,9 @@ void Grafo::removerVertice(string nomeARemover)
 	}
 	if (indVertice < 0)
 		throw("Vértice não existe!");
-	
+	//remover todas as arestas desse vértice
+	matAdjacencia.
+
 	numVertices--;
 }
 
@@ -75,7 +77,7 @@ void Grafo::removerAresta(string nomeOrigemARemover, string nomeDestinoARemover)
 		throw("Vértice de origem não existe!");
 	if (indDestino < 0)
 		throw("Vértice de destino não existe!");
-	matAdjacencia.inserir(indOrigem, indDestino, &valorPadrao);
+	matAdjacencia.inserir(indOrigem, indDestino, ((InfoArvoreEsparsa*)&valorPadrao));
 }
 
 Grafo::~Grafo()
