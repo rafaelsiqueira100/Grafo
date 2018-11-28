@@ -17,6 +17,7 @@ public:
 	int getMaiorLinha() throw(char*);
 	int getMenorColuna() throw(char*);
 	int getMaiorColuna() throw(char*);
+	char isVazia();
 private:
 	char vazia;
 	ArvoreEsparsa arvoreLinhas;

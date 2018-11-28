@@ -37,7 +37,7 @@ void Grafo::novaAresta(string nomeVerticeOrigem, string nomeVerticeDestino,const
 	matAdjacencia.inserir(indOrigem, indDestino,(InfoArvoreEsparsa*) &custo);
 }
 
-void Grafo::removerVertice(string nomeARemover) 
+void Grafo::removerVertice(string nomeARemover) throw(char*)
 {
 
 	if (listaVertices.empty())
@@ -51,25 +51,28 @@ void Grafo::removerVertice(string nomeARemover)
 			/*it =*/ listaVertices.erase(it);
 			//it--;
 			indVertice = indLista;
+			break;
 		}
 	}
 	if (indVertice < 0)
 		throw("Vértice não existe!");
 	//remover todas as arestas desse vértice
-	int menorLinha(matAdjacencia.getMenorLinha());
-	int maiorLinha(matAdjacencia.getMaiorLinha());
-	int menorColuna(matAdjacencia.getMenorColuna());
-	int maiorColuna(matAdjacencia.getMaiorColuna());
-	for (int i = menorLinha; i <= maiorLinha; i++) {
-		matAdjacencia.inserir(i, indVertice,(InfoArvoreEsparsa*) &valorPadrao);
-	}
-	for (int j = menorColuna; j <= maiorColuna; j++) {
-		matAdjacencia.inserir(indVertice, j,(InfoArvoreEsparsa*) &valorPadrao);
+	if (!matAdjacencia.isVazia()) {
+		int menorLinha(matAdjacencia.getMenorLinha());
+		int maiorLinha(matAdjacencia.getMaiorLinha());
+		int menorColuna(matAdjacencia.getMenorColuna());
+		int maiorColuna(matAdjacencia.getMaiorColuna());
+		for (int i = menorLinha; i <= maiorLinha; i++) {
+			matAdjacencia.inserir(i, indVertice, (InfoArvoreEsparsa*)&valorPadrao);
+		}
+		for (int j = menorColuna; j <= maiorColuna; j++) {
+			matAdjacencia.inserir(indVertice, j, (InfoArvoreEsparsa*)&valorPadrao);
+		}
 	}
 	numVertices--;
 }
 
-void Grafo::removerAresta(string nomeOrigemARemover, string nomeDestinoARemover)
+void Grafo::removerAresta(string nomeOrigemARemover, string nomeDestinoARemover) throw(char*)
 {
 	list<Vertice>::iterator it;
 	if (listaVertices.empty())

@@ -15,8 +15,8 @@ public:
 	Grafo(const InfoArvoreEsparsa&);
 	void novoVertice(string);
 	void novaAresta(string, string,const InfoArvoreEsparsa&)throw(char*);
-	void removerVertice(string);
-	void removerAresta(string, string);
+	void removerVertice(string)throw (char*);
+	void removerAresta(string, string) throw(char*);
 
 
 	~Grafo();

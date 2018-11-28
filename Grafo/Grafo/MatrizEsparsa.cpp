@@ -162,6 +162,11 @@ int MatrizEsparsa::getMaiorColuna() throw(char *)
 	return this->maiorColuna;
 }
 
+char MatrizEsparsa::isVazia()
+{
+	return this->vazia;
+}
+
 void MatrizEsparsa::calcularMenorLinha() throw(char *)
 {
 	if (this->vazia)
