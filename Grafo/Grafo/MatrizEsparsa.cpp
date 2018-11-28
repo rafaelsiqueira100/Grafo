@@ -145,17 +145,20 @@ int MatrizEsparsa::getMenorLinha() throw(char *)
 
 int MatrizEsparsa::getMaiorLinha() throw(char *)
 {
-	return this->calcularMaiorLinha();
+	this->calcularMaiorLinha();
+	return this->maiorLinha;
 }
 
 int MatrizEsparsa::getMenorColuna() throw(char *)
 {
-	return this->
+	this->calcularMenorColuna(this->arvoreLinhas.getRaiz());
+	return this->menorColuna;
 }
 
 int MatrizEsparsa::getMaiorColuna() throw(char *)
 {
-	return 0;
+	this->calcularMaiorColuna(this->arvoreLinhas.getRaiz());
+	return this->maiorColuna;
 }
 
 void MatrizEsparsa::calcularMenorLinha() throw(char *)
