@@ -140,7 +140,8 @@ void MatrizEsparsa::inserir(int linha, int coluna, InfoArvoreEsparsa*valor) thro
 
 int MatrizEsparsa::getMenorLinha() throw(char *)
 {
-	return this->calcularMenorLinha();
+	this->calcularMenorLinha();
+	return this->menorLinha;
 }
 
 int MatrizEsparsa::getMaiorLinha() throw(char *)

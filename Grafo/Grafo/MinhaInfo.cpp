@@ -14,7 +14,7 @@ MinhaInfo::MinhaInfo(const InfoArvoreEsparsa& outra) :
 	MinhaInfo(((const MinhaInfo&)outra).chave)
 {}
 MinhaInfo::~MinhaInfo() {
-	if (this->info != nullptr)
+	if (this->info)
 		delete this->info;
 }
 ostream& operator<< (ostream& os, const MinhaInfo& info) throw() {
