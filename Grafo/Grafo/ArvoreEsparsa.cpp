@@ -62,7 +62,7 @@ ostream& ArvoreEsparsa::print(ostream& os) const throw()
 		return os << "{  }" << '\n';
 	return	os << '{' << *(this->raiz) << '}' << '\n';
 }
-char ArvoreEsparsa::haInfo(InfoArvoreEsparsa* info) const throw() {
+char ArvoreEsparsa::haInfo(const InfoArvoreEsparsa& info) const throw() {
 	if (this->raiz == nullptr)
 		return 0;
 	return this->raiz->haInfo(info);

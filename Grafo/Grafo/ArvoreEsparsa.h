@@ -23,7 +23,7 @@ public:
 	char operator>=(const InfoArvoreEsparsa&)const throw();
 	InfoArvoreEsparsa& operator=(const InfoArvoreEsparsa&)throw();
 	ostream& print(ostream&) const throw();
-	char haInfo(InfoArvoreEsparsa*) const throw();
+	char haInfo(const InfoArvoreEsparsa&) const throw();
 	NoArvoreEsparsa* getRaiz() const throw();
 	char isVazia() const throw();
 	

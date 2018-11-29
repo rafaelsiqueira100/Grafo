@@ -8,15 +8,19 @@ class Grafo
 {
 private:
 	int numVertices;
+	int codAtual;
 	list<Vertice> listaVertices;
 	MatrizEsparsa matAdjacencia;
 	const InfoArvoreEsparsa& valorPadrao;
+	char doisSentidos;
 public:
-	Grafo(const InfoArvoreEsparsa&);
+	Grafo(const InfoArvoreEsparsa&, char);
 	void novoVertice(string);
 	void novaAresta(string, string,const InfoArvoreEsparsa&)throw(char*);
 	void removerVertice(string)throw (char*);
 	void removerAresta(string, string) throw(char*);
+
+	friend ostream& operator<< (ostream&, const Grafo&) throw();
 
 
 	~Grafo();

@@ -181,22 +181,22 @@ char NoArvoreEsparsa::isFolha() const throw() {
 
 	return (this->esq == nullptr && this->dir == nullptr);
 }
-char NoArvoreEsparsa::haInfo(InfoArvoreEsparsa* info) const throw() {
+char NoArvoreEsparsa::haInfo(const InfoArvoreEsparsa& info) const throw() {
 	NoArvoreEsparsa* noRel = (NoArvoreEsparsa*)(this);
 
 loop:while (1) {
 	if (noRel == nullptr)
 		return 0;
 	if ((noRel->info) != nullptr) {
-		if (*(noRel->info) == *info) {
+		if (*(noRel->info) == info) {
 			return true;
 		}
-		if (*(noRel->info) > *info) {
+		if (*(noRel->info) > info) {
 			//ir pro ponteiro de nó i-1
 			noRel = (noRel->esq);
 			goto loop;
 		}
-		if (*(noRel->info) < *info) {
+		if (*(noRel->info) < info) {
 			noRel = (noRel->dir);
 			goto loop;
 		}
